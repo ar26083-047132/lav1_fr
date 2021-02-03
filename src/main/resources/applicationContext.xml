@@ -7,6 +7,16 @@ http://www.springframework.org/schema/beans/spring-be..
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-..">
 
-
-
+<bean id="cardBean"
+      class="org.example.Card">
+    <constructor-arg value="123"/>
+</bean>
+    <bean id="accBean"
+          class="org.example.BackAccount">
+        <constructor-arg value="123"/>
+    </bean>
+    <bean id="servBean"
+        class="org.example.BankServ">
+        <constructor-arg ref="accBean"/>
+    </bean>
 </beans>
