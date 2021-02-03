@@ -5,12 +5,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Scanner;
 
 public class Atm {
-    public static void main(System[] arg){
+    public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
         int it = -1, menu = -1;
+        boolean dos = false;
         while(true){
             System.out.println("+------[ATM]------+");
             System.out.println("+[1] - Enter Card +");
@@ -27,6 +29,7 @@ public class Atm {
                 System.out.println("+   [Enter PIN]   +");
                 System.out.println("+ *PIN = 4321     +");
             }
+
 
             while(bankServ.Dost(sc.nextInt())){
                 System.out.println("+------[ATM]------+");

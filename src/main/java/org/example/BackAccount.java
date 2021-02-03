@@ -1,8 +1,8 @@
 package org.example;
 
 public class BackAccount {
-    private int id;
-    private int pin = 123;
+    private int id = 123;
+    private int pin = 4321;
     private int money = 2500;
 
     public BackAccount(int id){

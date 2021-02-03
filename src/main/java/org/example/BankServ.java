@@ -11,15 +11,19 @@ public class BankServ {
         }
         return 0;
     }
+
     public boolean Dost(int pin){
         if (backAccount.getPin() == pin){
+            System.out.println(backAccount.getPin());
             return true;
         }
         return false;
     }
+
     public int getingMoney(){
+        int Money = backAccount.getMoney();
         backAccount.setMoney(0);
-        return backAccount.getMoney();
+        return Money;
     }
     public void setPin (int pin){
         backAccount.setPin(pin);
