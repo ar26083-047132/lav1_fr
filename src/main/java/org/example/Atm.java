@@ -11,7 +11,7 @@ public class Atm {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-        int it = -1, menu = -1;
+        int it = -1, menu = -1, buf;
         boolean dos = false;
         while(true){
             System.out.println("+------[ATM]------+");
@@ -30,8 +30,8 @@ public class Atm {
                 System.out.println("+ *PIN = 4321     +");
             }
 
-
-            while(bankServ.Dost(sc.nextInt())){
+            buf = sc.nextInt();
+            while(bankServ.Dost(buf)){
                 System.out.println("+------[ATM]------+");
                 System.out.println("+[1] Get all money+");
                 System.out.println("+[2] Change Pin   +");
@@ -43,6 +43,8 @@ public class Atm {
                 }else if(menu == 2){
                     System.out.println("set pin, enter pin");
                     bankServ.setPin(sc.nextInt());
+                }else if(menu == 0){
+                    break;
                 }
             }
         }
